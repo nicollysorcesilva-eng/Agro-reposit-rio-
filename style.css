@@ -1,0 +1,492 @@
+/* ==========================================================================
+   Variables de Design e Layout Fluido
+   ========================================================================== */
+:root {
+  --primary-color: #2e7d32;
+  --primary-light: #4caf50;
+  --secondary-color: #ff9800;
+  --dark-color: #1b5e20;
+  --bg-light: #f1f8e9;
+  --bg-white: #ffffff;
+  --text-color: #212121;
+  --text-muted: #666666;
+
+  --font-main: 'Poppins', sans-serif;
+
+  --font-size-h1: clamp(2rem, 5vw, 3.5rem);
+  --font-size-h2: clamp(1.8rem, 4vw, 2.5rem);
+  --font-size-body: clamp(1rem, 2vw, 1.15rem);
+
+  --border-radius: 16px;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Reset Base
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+/* ==========================================================================
+   Acessibilidade
+   ========================================================================== */
+.accessibility-bar {
+  background-color: #333;
+  padding: 0.5rem 5%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.accessibility-bar button {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+.accessibility-bar button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Blindagem do Modo de Contraste */
+body.high-contrast, 
+body.high-contrast *:not(i):not(.fa) {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #ff0 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+body.high-contrast a, 
+body.high-contrast button {
+  color: #ff0 !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.main-header {
+  background-color: var(--bg-white);
+  box-shadow: var(--box-shadow);
+}
+
+.header-container {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.nav-menu {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-menu a:hover {
+  color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, var(--bg-white), var(--bg-light));
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: var(--font-size-h1);
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+  color: var(--primary-light);
+}
+
+.hero-content p {
+  font-size: var(--font-size-body);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+/* Botões */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ==========================================================================
+   Animações e Ilustrações Conceituais
+   ========================================================================== */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustrations-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.shape-city, 
+.shape-farm, 
+.shape-connection {
+  font-size: 4rem;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  animation: float 4s ease-in-out infinite;
+}
+
+.shape-connection {
+  font-size: 3rem;
+  color: var(--secondary-color);
+}
+
+.shape-farm {
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.agro-animation-badge {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================================================
+   Seções Informativas (Grid)
+   ========================================================================== */
+.section-title {
+  font-size: var(--font-size-h2);
+  color: var(--dark-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--bg-white);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+/* ==========================================================================
+   Carrossel de Curiosidades
+   ========================================================================== */
+.carousel-section {
+  background-color: var(--primary-color);
+  padding: 4rem 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  color: white;
+  text-align: center;
+}
+
+.carousel-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.carousel-controls button {
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+.carousel-controls button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   Quiz Box
+   ========================================================================== */
+.quiz-section {
+  background-color: var(--bg-white);
+}
+
+.quiz-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.quiz-box {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--bg-light);
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.quiz-option-btn {
+  background-color: var(--bg-white);
+  border: 2px solid var(--primary-light);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.quiz-option-btn:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.quiz-feedback {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.quiz-feedback.correct {
+  background-color: #c8e6c9;
+  color: #256029;
+}
+
+.quiz-feedback.wrong {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   Acordeão (FAQ)
+   ========================================================================== */
+.accordion-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: var(--bg-white);
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  text-align: left;
+  font-family: var(--font-main);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 1.5rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Rodapé e Responsividade Básica
+   ========================================================================== */
+.main-footer {
+  background-color: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
