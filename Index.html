@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroforte Sustentável | A Conexão Campo-Cidade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Controles de Acessibilidade">
+        <button id="btn-increase" aria-label="Aumentar texto">A+</button>
+        <button id="btn-decrease" aria-label="Diminuir texto">A-</button>
+        <button id="btn-contrast" aria-label="Alternar Alto Contraste">Alto Contraste</button>
+    </div>
+
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">Agro<span>Forte</span></div>
+            <nav class="nav-menu" aria-label="Menu principal">
+                <a href="#sustentabilidade">Sustentabilidade</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#curiosidades">Curiosidades</a>
+                <a href="#quiz">Desafio Interativo</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>O alimento na sua mesa nasce da <span>tecnologia no campo</span>.</h1>
+                <p>Descubra como a conexão entre o interior profundo e as grandes cidades move o futuro do planeta através da sustentabilidade e inovação digital.</p>
+                <a href="#quiz" class="btn-primary">Testar Meus Conhecimentos</a>
+            </div>
+            <div class="hero-visual">
+                <div class="agro-animation-badge">100% Sustentável</div>
+                <div class="illustrations-container">
+                    <div class="shape-city">🏙️</div>
+                    <div class="shape-connection">⚡</div>
+                    <div class="shape-farm">🚜</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="info-section">
+        <div class="container">
+            <h2 class="section-title">Pilares do Amanhã</h2>
+            <div class="grid-3-columns">
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Preservação Ambiental</h3>
+                    <p>O produtor rural moderno é o maior guardião das florestas, utilizando técnicas de plantio direto e rotação de culturas para enriquecer o solo sem desmatar.</p>
+                </div>
+                <div class="card" id="tecnologia">
+                    <div class="card-icon">🛰️</div>
+                    <h3>Tecnologia no Campo</h3>
+                    <p>Drones, sensores IoT e inteligência artificial mapeiam lavouras em tempo real, economizando água e aplicando insumos apenas onde é estritamente necessário.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔄</div>
+                    <h3>Campo & Cidade</h3>
+                    <p>Tudo o que consumimos nos centros urbanos — da roupa de algodão ao café da manhã — depende de uma cadeia logística integrada e ecologicamente correta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="curiosidades" class="carousel-section">
+        <div class="container">
+            <h2 class="section-title text-white">Você Sabia?</h2>
+            <div class="carousel-wrapper">
+                <div id="carousel-container" class="carousel-content">
+                    </div>
+                <div class="carousel-controls">
+                    <button id="prev-carousel" aria-label="Slide anterior">❮</button>
+                    <button id="next-carousel" aria-label="Próximo slide">❯</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz-section">
+        <div class="container">
+            <h2 class="section-title">Desafio Agro-Conectado</h2>
+            <p class="quiz-intro">Estudantes e professores: testem seus conhecimentos sobre a origem dos alimentos e a sustentabilidade no campo!</p>
+            
+            <div class="quiz-box">
+                <div id="quiz-question-container">
+                    </div>
+                <div id="quiz-feedback" class="quiz-feedback hidden"></div>
+                <button id="btn-next-question" class="btn-primary hidden">Próxima Pergunta</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div id="faq-accordion" class="accordion-wrapper">
+                </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Agroforte Sustentável. Uma experiência educativa voltada para o futuro.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
